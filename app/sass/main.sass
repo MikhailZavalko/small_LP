@@ -37,7 +37,7 @@ body
 				// border-color: green
 
 .container
-	width: 1880px
+	width: 100%
 	margin: 0 auto
 	padding: 0 20px
 	position: relative
@@ -56,7 +56,7 @@ body
 	right: 0
 	bottom: 0
 	overflow: hidden
-	background: #1d1d1d
+	background: #ebecee
 	z-index: 1001
 
 .preloader_image
@@ -138,18 +138,17 @@ section
 
 
 .top-section
-	position: fixed
 	padding: 0
 	background: url('../img/top-bg.jpg') right no-repeat
 	background-size: cover
-	min-height: 100vh //new
+	min-height: 100vh
 	width: 100%
 	display: flex
 	.container
 		display: flex
 		justify-content: center
 		flex-direction: column
-	h1
+	h1, h2
 		margin: 0 0 46px 0
 		line-height: 1.3
 		font-size: 40px
@@ -161,9 +160,12 @@ section
 			span
 				background-color: #ffffff
 				display: inline-block
-				padding: 0 14px	
+				padding: 0 14px
 				span
 					color: $accent
+					padding: 0
+	h2
+		display: none
 	.about-icons
 		max-width: 772px
 		display: grid
@@ -435,21 +437,49 @@ section
 	position: relative
 
 .top-section.thank-you-page
+	background: #fff
+	.container
+		width: 1211px
+	.header
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 84px;
+		.mail-link
+			display: flex
+			justify-content: center
+			text-decoration: none
+			font-weight: 500
+			color: $fontcolor
+			transition: $time
+			img
+				margin-right: 12px
+			&:hover
+				color: $accent
 	h1
 		text-align: center
-		margin-bottom: 30px
-		font-size: 55px
+		margin-bottom: 14px
+		font-size: 64px
+		font-weight: 900
+		line-height: 1.2
+		.head-bg
+			margin: 0
 	h2
 		text-align: center
 		font-size: 36px
-		font-weight: 400
-		margin-bottom: 65px
+		font-weight: 300
+		margin: 0 0 39px
+		line-height: 1.2
 	p
-		font-size: 18px
-		margin-bottom: 50px
+		font-size: 16px
+		font-weight: 300
+		margin: 0 0 88px
 		text-align: center
 	.button
-		max-width: 495px
+		max-width: 364px
+		height: 52px
 		margin: 0 auto
+		text-transform: none
+		font-weight: 500
 
 @import "media" // Always at the end
